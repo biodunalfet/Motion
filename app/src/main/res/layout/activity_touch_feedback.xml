@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_touch_feedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:orientation="vertical"
+    tools:context="com.hamza.motion.TouchFeedbackActivity">
+
+
+    <TextView
+        android:text="Bounded ripple xml using ?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:minHeight="60dp"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textView_bounded_ripple_xml" />
+
+    <TextView
+        android:text="Borderless Ripple xml Using ?android:attr/selectableItemBackgroundBorderless (requires API level 21)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:minHeight="60dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/black"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:id="@+id/textView_borderless_ripple_xml" />
+
+    <TextView
+        android:text="Bounded ripple xml using RippleDrawable with an oval mask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:minHeight="60dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/ripple_bounded_with_oval_mask"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textView_ripple_drawable_oval_mask" />
+
+    <TextView
+        android:text="Bounded ripple xml using RippleDrawable with a rectangle mask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:minHeight="60dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/ripple_bounded_with_rect_mask"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textView_ripple_drawable_rect_mask" />
+
+    <TextView
+        android:text="Bounded ripple xml using RippleDrawable with mask and child layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:minHeight="60dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/ripple_bounded_with_mask_child"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textView_ripple_drawable_child" />
+
+
+    <TextView
+        android:text="Unbounded ripple xml using RippleDrawable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:minHeight="60dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/ripple_unbounded"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textView_unbounded_ripple_drawable_xml" />
+
+    <TextView
+        android:text="Unbounded ripple Java using RippleDrawable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:minHeight="60dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/black"
+        android:id="@+id/textView_ripple_drawable_java" />
+
+
+
+</LinearLayout>
