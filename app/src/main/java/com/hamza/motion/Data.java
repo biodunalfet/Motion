@@ -10,7 +10,8 @@ class Data {
      *  Main list items
      */
     static Item[] mainListItems = new Item[]{
-            new Item("Touch Feedback", "Simple animations to signify view interactions")
+            new Item("Touch Feedback", "Simple animations to signify view interactions"),
+            new Item("Animations", "Using ViewPropertyAnimator")
     };
 
     /**

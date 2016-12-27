@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewPropertyAnimator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -66,8 +67,27 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
             root.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(context, TouchFeedbackActivity.class);
-                    context.startActivity(intent);
+
+                    int index = getAdapterPosition();
+
+                    switch (index){
+
+                        case 0:
+                            Intent intent_tfb = new Intent(context, TouchFeedbackActivity.class);
+                            context.startActivity(intent_tfb);
+                            break;
+
+                        case 1:
+                            Intent intent_vpa = new Intent(context, ViewPropertyAnimationActivity.class);
+                            context.startActivity(intent_vpa);
+                            break;
+
+                        default:
+                            break;
+
+                    }
+
+
                 }
             });
         }

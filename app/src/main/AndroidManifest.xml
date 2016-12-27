@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TouchFeedbackActivity"></activity>
+        <activity android:name=".TouchFeedbackActivity" />
+        <activity android:name=".ViewPropertyAnimationActivity"></activity>
     </application>
 
 </manifest>
