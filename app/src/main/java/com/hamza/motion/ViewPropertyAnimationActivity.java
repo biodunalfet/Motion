@@ -125,6 +125,12 @@ public class ViewPropertyAnimationActivity extends AppCompatActivity {
         revealbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                int centerRevealX = (revealbutton.getLeft() + revealbutton.getRight())/2;
+                int centerRevealY = (revealbutton.getTop() + revealbutton.getBottom())/2;
+
+                //float radius = (float) Math.hypot((double) centerX, (double) centerY);
+                float radius = (float) Math.hypot((double) progressIndicator.getLeft(), (double) progressIndicator.getBottom());
                 if (progressIndicator.getVisibility() == View.GONE){
 
                     progressIndicator.setVisibility(View.VISIBLE);
@@ -132,15 +138,15 @@ public class ViewPropertyAnimationActivity extends AppCompatActivity {
                     progressIndicator.setScaleX(1.f);
                     progressIndicator.setScaleY(1.f);
 
-                    int centerX = (progressIndicator.getLeft() + progressIndicator.getRight())/2;
-                    int centerY = (progressIndicator.getTop() + progressIndicator.getBottom())/2;
+//                    int centerX = (progressIndicator.getLeft() + progressIndicator.getRight())/2;
+//                    int centerY = (progressIndicator.getTop() + progressIndicator.getBottom())/2;
 
-                    float radius = (float) Math.hypot((double) centerX, (double) centerY);
+
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         Animator revealAnimator = ViewAnimationUtils.createCircularReveal(progressIndicator,
-                                centerX,
-                                centerY,
+                                centerRevealX,
+                                centerRevealY,
                                 0,
                                 radius);
 
@@ -151,15 +157,15 @@ public class ViewPropertyAnimationActivity extends AppCompatActivity {
 
                 }
                 else{
-                    int centerX = (progressIndicator.getLeft() + progressIndicator.getRight())/2;
-                    int centerY = (progressIndicator.getTop() + progressIndicator.getBottom())/2;
+//                    int centerX = (progressIndicator.getLeft() + progressIndicator.getRight())/2;
+//                    int centerY = (progressIndicator.getTop() + progressIndicator.getBottom())/2;
 
-                    float radius = (float) Math.hypot((double) centerX, (double) centerY);
+                    //float radius = (float) Math.hypot((double) centerX, (double) centerY);
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         Animator revealAnimator = ViewAnimationUtils.createCircularReveal(progressIndicator,
-                                centerX,
-                                centerY,
+                                centerRevealX,
+                                centerRevealY,
                                 radius,
                                 0);
 

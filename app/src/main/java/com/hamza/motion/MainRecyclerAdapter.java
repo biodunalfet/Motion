@@ -1,7 +1,9 @@
 package com.hamza.motion;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,6 +82,59 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
                         case 1:
                             Intent intent_vpa = new Intent(context, ViewPropertyAnimationActivity.class);
                             context.startActivity(intent_vpa);
+                            break;
+
+                        case 2:
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                ((MainActivity) context).slideTransition();
+                            }
+                            Intent intent_slide = new Intent(context, GenericActivity.class);
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                context.startActivity(intent_slide,
+                                        ActivityOptions
+                                                .makeSceneTransitionAnimation(((MainActivity) context))
+                                                .toBundle());
+                            }
+                            else{
+                                context.startActivity(intent_slide);
+                            }
+                            break;
+
+                        case 3:
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                ((MainActivity) context).explodeTransition();
+                            }
+                            Intent intent_explode = new Intent(context, GenericActivity.class);
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                context.startActivity(intent_explode,
+                                        ActivityOptions
+                                                .makeSceneTransitionAnimation(((MainActivity) context))
+                                                .toBundle());
+                            }
+                            else{
+                                context.startActivity(intent_explode);
+                            }
+                            break;
+
+                        case 4:
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                ((MainActivity) context).fadeTransition();
+                            }
+                            Intent intent_fade = new Intent(context, GenericActivity.class);
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                context.startActivity(intent_fade,
+                                        ActivityOptions
+                                                .makeSceneTransitionAnimation(((MainActivity) context))
+                                                .toBundle());
+                            }
+                            else{
+                                context.startActivity(intent_fade);
+                            }
+                            break;
+
+                        case 5:
+                            Intent intent_se = new Intent(context, SharedElementActivity.class);
+                            context.startActivity(intent_se);
                             break;
 
                         default:

@@ -16,7 +16,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".TouchFeedbackActivity" />
-        <activity android:name=".ViewPropertyAnimationActivity"></activity>
+        <activity android:name=".ViewPropertyAnimationActivity" />
+        <activity android:name=".GenericActivity" />
+        <activity android:name=".SharedElementActivity" />
+        <activity
+            android:name=".SharedUnveiledActivity"
+            android:label="@string/title_activity_shared_unveiled"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

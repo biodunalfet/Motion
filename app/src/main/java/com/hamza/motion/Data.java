@@ -11,7 +11,11 @@ class Data {
      */
     static Item[] mainListItems = new Item[]{
             new Item("Touch Feedback", "Simple animations to signify view interactions"),
-            new Item("Animations", "Using ViewPropertyAnimator")
+            new Item("Animations", "Using ViewPropertyAnimator"),
+            new Item("Transitions", "Slide"),
+            new Item("Transitions", "Explode"),
+            new Item("Transitions", "Fade"),
+            new Item("Transitions", "Shared Elements")
     };
 
     /**
