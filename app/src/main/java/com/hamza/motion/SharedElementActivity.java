@@ -7,6 +7,8 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,6 +37,8 @@ public class SharedElementActivity extends AppCompatActivity {
                 ActivityOptionsCompat options = ActivityOptionsCompat
                         .makeSceneTransitionAnimation(SharedElementActivity.this,
                                 participants);
+
+
 
                 ActivityCompat.startActivity(SharedElementActivity.this, intent, options.toBundle());
             }
