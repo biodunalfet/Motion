@@ -22,7 +22,11 @@
         <activity
             android:name=".SharedUnveiledActivity"
             android:label="@string/title_activity_shared_unveiled"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArcMotionActivity"
+            android:label="@string/title_activity_arc_motion"
+            android:theme="@style/AppTheme.ArcMotion"></activity>
     </application>
 
 </manifest>

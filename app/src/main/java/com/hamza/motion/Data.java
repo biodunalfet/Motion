@@ -15,7 +15,7 @@ class Data {
             new Item("Transitions", "Slide"),
             new Item("Transitions", "Explode"),
             new Item("Transitions", "Fade"),
-            new Item("Transitions", "Shared Elements")
+            new Item("Transitions", "Shared Elements and ArcMotion")
     };
 
     /**

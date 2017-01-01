@@ -38,8 +38,6 @@ public class SharedElementActivity extends AppCompatActivity {
                         .makeSceneTransitionAnimation(SharedElementActivity.this,
                                 participants);
 
-
-
                 ActivityCompat.startActivity(SharedElementActivity.this, intent, options.toBundle());
             }
         });
